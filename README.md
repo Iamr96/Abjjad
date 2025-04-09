@@ -19,3 +19,34 @@ A production-ready API for uploading images, extracting EXIF metadata, and gener
 git clone https://github.com/Iamr96/Abjjad.git
 cd abbjad
 dotnet run
+
+
+
+## 🔍 API Documentation
+
+Access interactive documentation via Swagger:
+
+**🔗 [https://localhost:5001/swagger](https://localhost:5001/swagger)**
+
+---
+
+## 📡 Endpoints
+
+| Method | Endpoint                          | Description                          |
+|--------|-----------------------------------|--------------------------------------|
+| POST   | `/api/images`                     | Upload multiple images               |
+| GET    | `/api/images/{id}/{size}`         | Get resized image (phone/tablet/desktop/custom width) |
+| GET    | `/api/images/{id}/metadata`       | Get image EXIF metadata              |
+
+---
+
+## 🛠️ Configuration
+
+You can customize storage and validation settings by modifying the `appsettings.json` file:
+
+```json
+{
+  "Storage": {
+    "RootPath": "E:\\AbbjadPics" // Change this to set a different image storage path
+  }
+}
